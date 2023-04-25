@@ -29,6 +29,8 @@
     background-image: url("assets/img/imagen3.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
     
 }   
 .container{
@@ -47,18 +49,22 @@
     width: 90%;
     font-size: 40px;
     text-align: center;
+    text-shadow: 2px 2px 2px #333;
 }
 .header_intro p{
     width: 50%;
 }
-a{
+.button{
     color: white;
     text-decoration: none;
     text-align: center;
     background-color: salmon;
     border: solid 2px white;
-    padding: 5px;
+    padding: 12px;
     width: 60%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
 }
 .main_welcom{
     background-color: var(--background);
