@@ -28,12 +28,14 @@
 }
 .main_header{
     grid-area: header;
+    width: 100%;
     margin: 0 auto;
     min-height: 400px;
     background-image: url("assets/img/imagen3.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
+    justify-content: center;
     align-items: center;
     
 }   
@@ -104,13 +106,16 @@ hr{
 .estate > p{
     margin-top: 10px;
 }
+.main_galery{
+    grid-area: galery;
+    background-color: var(--background);
+}
 .main_galery img{
     display: block;
-    grid-area: galery;
     margin: 0 auto;
     width: 100%;
     padding: 10px 10px;
-    background-color: var(--background);
+   
 }
 .options{
     grid-area: options;
@@ -210,4 +215,19 @@ hr{
 .footer a{
     color: var(--text-color);
     text-decoration: none;
+}
+
+@media (min-width:700){
+    .state{
+        grid-area: galery;
+    }
+    .main_galery{
+       display: grid;
+       grid-column: 2 ;
+    }
+    .main_galery img{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
 }
