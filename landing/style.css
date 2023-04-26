@@ -99,44 +99,47 @@ hr{
     text-align: center;
 }
 .estate{
-    grid-area:;
     background-color: var(--background-secondary);
     width: 70%;
     color: var(--text-color);
     padding: 20px 10px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
 }
-.estate > p{
-    margin-top: 10px;
+.estate_info{
+    line-height: 25px;
+    padding-bottom: 7px;
 }
 .main_galery{
     background-color: var(--background);
     grid-area: galery;
 }
-.main_galery img{
-    display: block;
-    margin: 0 auto;
+.estate_img {
     width: 100%;
-    padding: 10px 10px;
+    height: 300px;
+}
+.main_galery img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 .main_options{
     grid-area: options;
     background-image: url(assets/img/imagen5.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 .options_container{
     grid-area: options;
     background-color: var(--text-color);
     width: 90%;
-    height: 90%;
-    margin: auto;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 15px;
+    padding: 40px 15px;
     text-align: center;
 }
 .options_container img{
@@ -144,6 +147,9 @@ hr{
     width: 80px;
     height: 80px;
     margin-top: 15px;
+    border: solid 1px #333;
+    padding: 8px;
+    border-radius:30%;
 }
 .span{
     font-size: 25px;
@@ -224,7 +230,16 @@ hr{
 @media (min-width:700px){
     
     .estate{
-      
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .estate_info{
+        width: 200px;
+        line-height: 30px;
+
     }
     .main_welcome{
         width: 70%;
@@ -240,16 +255,21 @@ hr{
     .main_options{
         display: flex;
     }
+    .main_options:hover .options_container{
+        transform: scale(1.2);
+    }
     .options_container{
         width: 50%;
-        height: 439px;
-        display: grid;
-        justify-items: center;
-        justify-content: center;
-        padding: 40px 66px;
+        padding: 60px 66px 80px;
+        margin: 140px auto;
+        transition: all .3s linear;
     }
     .options_img{
         display: flex;
+    }
+    .options_container img{
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
     .location{
         display: grid;
