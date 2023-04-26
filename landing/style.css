@@ -19,12 +19,13 @@
     grid-template-rows: repeat(7, max-content);
     grid-template-areas: 
     "header"
-    "welcom"
+    "welcome"
     "galery"
     "options"
     "location"
     "service"
     "footer";
+    background-color: var(--background);
 }
 .main_header{
     grid-area: header;
@@ -64,8 +65,8 @@
     letter-spacing: 1px;
     text-rendering: optimizeLegibility;
 }
-.main_welcom{
-    background-color: var(--background);
+.main_welcome{
+    grid-area: welcome;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,23 +93,25 @@ hr{
     width: 50px;
     border-color: var(--text-color);
 }
-.welcom_p{
+.welcome_p{
     width: 70%;
     color: var(--text-color-secondary);
     text-align: center;
 }
 .estate{
+    grid-area:;
     background-color: var(--background-secondary);
     width: 70%;
     color: var(--text-color);
     padding: 20px 10px;
+    margin: 0 auto;
 }
 .estate > p{
     margin-top: 10px;
 }
 .main_galery{
-    grid-area: galery;
     background-color: var(--background);
+    grid-area: galery;
 }
 .main_galery img{
     display: block;
@@ -116,7 +119,7 @@ hr{
     width: 100%;
     padding: 10px 10px;
 }
-.options{
+.main_options{
     grid-area: options;
     background-image: url(assets/img/imagen5.jpg);
     background-size: cover;
@@ -159,6 +162,7 @@ hr{
     max-width: 350px;
     width: 100%;
     height: 350px;
+    margin: 0 auto;
 }
 .location_map iframe{
     width: 100%;
@@ -174,7 +178,6 @@ hr{
 }
 .service{
     grid-area: service;
-    background-color:  var(--background);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -189,6 +192,7 @@ hr{
     max-width: 350px;
     width: 100%;
     height: 400px;
+    margin: 0 auto;
 }
 .service_img img{
     width: 100%;
@@ -208,25 +212,55 @@ hr{
     grid-area: footer;
     background-color: var(--background-secondary);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .footer a{
     color: var(--text-color);
     text-decoration: none;
+    margin: 0 4%;
 }
 
-@media (min-width:700){
-    .state{
-        grid-area: galery;
+@media (min-width:700px){
+    
+    .estate{
+      
+    }
+    .main_welcome{
+        width: 70%;
+        margin: 0 auto;
     }
     .main_galery{
        display: grid;
-       grid-column: 2 ;
+       grid-template-columns: 1fr 1fr;
+       width: 70%;
+       margin: 0px auto;
+       padding-bottom: 20px;
     }
-    .main_galery img{
-        display: block;
-        width: 200px;
-        height: 200px;
+    .main_options{
+        display: flex;
     }
+    .options_container{
+        width: 50%;
+        height: 439px;
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        padding: 40px 66px;
+    }
+    .options_img{
+        display: flex;
+    }
+    .location{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 27px 46px;
+    }
+    .service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 70%;
+        margin: 0 auto;
+    }
+   
 }
